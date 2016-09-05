@@ -1,0 +1,21 @@
+AllCops:
+  TargetRubyVersion:
+    2.3
+  Exclude:
+    - 'coverage/'
+    - 'template/'
+Documentation:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+Metrics/AbcSize:
+  Enabled: false
+Metrics/BlockLength:
+  Max: 70
+  Exclude:
+    - '**/*_spec.rb'
+    - '**/*_spec.rb'
+MethodLength:
+  Max: 35
+Style/FrozenStringLiteralComment:
+  Enabled: false

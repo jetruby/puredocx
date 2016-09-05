@@ -1,0 +1,32 @@
+image: ruby:2.3.1
+
+before_script:
+  - ruby -v
+  - which ruby
+  - gem install rubocop
+  - bundle install --without production --jobs $(nproc)
+
+rspec:
+  stage: test
+  script:
+    - bundle exec rspec
+  artifacts:
+    paths:
+      - coverage/
+
+rubocop:
+  script:
+    - bundle exec rubocop
+
+pages:
+  stage: deploy
+  dependencies:
+    - rspec
+  script:
+    - mv coverage/ public/
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
+  only:
+    - master
