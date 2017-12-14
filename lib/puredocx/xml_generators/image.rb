@@ -79,8 +79,8 @@ module PureDocx
           vertical:   :top
         }
         align_params.each do |item|
-          align[:horizontal] = item if item == :right  || item == :left
-          align[:vertical]   = item if item == :bottom || item == :top
+          align[:horizontal] = item if %i[right left].include? item
+          align[:vertical]   = item if %i[bottom top].include? item
         end
         align
       end

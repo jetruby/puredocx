@@ -135,7 +135,7 @@ describe PureDocx::XmlGenerators::Image do
       describe 'with two align parameters' do
         let(:result) { { horizontal: :right, vertical: :bottom } }
 
-        it { expect(subject.send(:prepare_align_params, [:right, :bottom])).to eq result }
+        it { expect(subject.send(:prepare_align_params, %i[right bottom])).to eq result }
       end
     end
   end

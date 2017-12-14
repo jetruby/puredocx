@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = 'It allows you to create docx document and to put formatted text, insert images and tables to it'
   s.authors     = ['JetRuby']
   s.email       = 'engineering@jetruby.com'
-  s.require_paths = %w(lib template)
+  s.require_paths = %w[lib template]
   s.files       = `git ls-files template lib LICENSE`.split("\n")
   s.homepage    = 'http://jetruby.com/'
   s.licenses = ['MIT']

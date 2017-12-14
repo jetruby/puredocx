@@ -37,18 +37,18 @@ photo = OpenStruct.new(
 # Tables
 header_table_options = {
   paddings: { left: 50, top: 20 },
-  sides_without_border: [:left, :top, :right, :bottom, :inside_h, :inside_v],
+  sides_without_border: %i[left top right bottom inside_h inside_v],
   col_width:  [nil, 4000]
 }
 
 nested_table_options = {
-  sides_without_border: [:left, :top, :right, :bottom, :inside_h, :inside_v],
+  sides_without_border: %i[left top right bottom inside_h inside_v],
   paddings: { left: 10, top: 100, right: 50, bottom: 30 },
   table_width: 3900
 }
 
 body_table_options = {
-  sides_without_border: [:inside_h, :inside_v],
+  sides_without_border: %i[inside_h inside_v],
   paddings: { left: 50, top: 50, right: 50, bottom: 50 },
   col_width:  [450, 3000, nil]
 }

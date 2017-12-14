@@ -41,7 +41,7 @@ describe PureDocx::DocArchive do
 
   describe '#save_document_content' do
     context 'writes xml content to word/document.xml inside zip document' do
-      let(:params) { %w(content header right) }
+      let(:params) { %w[content header right] }
       before do
         allow(subject).to receive(:document_colontitle!).with('header', header_template_path)
         allow(subject).to receive(:document_colontitle!).with('right',  footer_template_path)
@@ -89,7 +89,7 @@ describe PureDocx::DocArchive do
   describe '#generate_template_files!' do
     context 'adds all template files, that were mentioned inside rels object ' do
       let(:rels_without_image) { { 'file_name' => 'link' } }
-      let(:rels_with_image)    { { 'file_name' => %w(link image_path) } }
+      let(:rels_with_image)    { { 'file_name' => %w[link image_path] } }
       context 'adds rels files by template target path' do
         before { allow(described_class).to receive(:template_path).and_return(path) }
         after  { subject.generate_template_files!(rels_without_image, 'some_path/') }
@@ -151,7 +151,7 @@ describe PureDocx::DocArchive do
       end
 
       describe 'with all params' do
-        let(:params) { %w(content header footer) }
+        let(:params) { %w[content header footer] }
         let(:result) { 'content: content, header: header, footer: footer' }
 
         it { expect(subject.document_content(*params)).to eq result }

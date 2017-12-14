@@ -4,7 +4,7 @@ FactoryGirl.define do
     rels_constructor { nil }
     options do
       {
-        style: [:bold, :italic],
+        style: %i[bold italic],
         size:  32,
         align: 'center'
       }
