@@ -36,8 +36,8 @@ describe PureDocx::XmlGenerators::Row do
         after { subject.send(:cells) }
 
         specify do
-          expect(PureDocx::XmlGenerators::Cell).to receive(:new).twice { cell_generator }
-          expect(cell_generator).to receive(:xml).twice { 'content xml' }
+          expect(PureDocx::XmlGenerators::Cell).to receive(:new).twice.and_return(cell_generator)
+          expect(cell_generator).to receive(:xml).twice.and_return('content xml')
         end
       end
 

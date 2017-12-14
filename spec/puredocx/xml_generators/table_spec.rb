@@ -118,8 +118,8 @@ describe PureDocx::XmlGenerators::Table do
         after { subject.send :rows }
 
         specify do
-          expect(PureDocx::XmlGenerators::Row).to receive(:new).twice { row_generator }
-          expect(row_generator).to receive(:xml).twice { 'row xml' }
+          expect(PureDocx::XmlGenerators::Row).to receive(:new).twice.and_return(row_generator)
+          expect(row_generator).to receive(:xml).twice.and_return('row xml')
         end
       end
       describe 'returns right rows xml' do

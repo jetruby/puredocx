@@ -2,12 +2,12 @@ require 'rspec'
 require 'simplecov'
 SimpleCov.start do
   add_filter '/spec/'
-  add_group 'Document', %w(
+  add_group 'Document', %w[
     lib/puredocx/doc_archive.rb
     lib/puredocx/document.rb
     lib/puredocx.rb
     lib/puredocx/exceptions.rb
-  )
+  ]
   add_group 'Constructors', 'lib/puredocx/constructors'
   add_group 'Generators',   'lib/puredocx/xml_generators'
 end

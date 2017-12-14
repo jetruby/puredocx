@@ -14,7 +14,7 @@ module PureDocx
       @header_content      = ''
       @body_content        = ''
       (class << self; self; end).class_eval do
-        [:text, :table, :image].each do |method_name|
+        %i[text table image].each do |method_name|
           define_method method_name do |content, options = {}|
             Object.const_get(
               "PureDocx::XmlGenerators::#{method_name.to_s.capitalize}"

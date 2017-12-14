@@ -5,7 +5,6 @@ module PureDocx
       BOLD_BORDER_VALUES    = { value: '18', default_value: '4' }.freeze
       attr_reader :table_content,
                   :columns_count,
-                  :columns_width,
                   :sides_without_border,
                   :bold_sides,
                   :received_table_width,
@@ -16,7 +15,6 @@ module PureDocx
         @columns_count        = table_content[0].size
         @received_table_width = arguments[:table_width]
         @received_col_width   = arguments[:col_width]
-        @columns_width        = columns_width
         ensure_columns_count!
         @sides_without_border = prepare_sides(WITHOUT_BORDER_VALUES, arguments[:sides_without_border])
         @bold_sides           = prepare_sides(BOLD_BORDER_VALUES,    arguments[:bold_sides])
@@ -85,7 +83,7 @@ module PureDocx
       end
 
       def prepare_sides(border_type_value, params = [])
-        [:right, :left, :top, :bottom, :inside_h, :inside_v].map do |item|
+        %i[right left top bottom inside_h inside_v].map do |item|
           [item, params&.include?(item) ? border_type_value[:value] : border_type_value[:default_value]]
         end.to_h
       end
