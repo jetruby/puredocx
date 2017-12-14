@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'puredocx'
-  s.version     = '0.1.0'
-  s.date        = '2017-04-04'
+  s.version     = '0.1.1'
+  s.date        = '2017-12-14'
   s.summary     = 'A simple gem for creating docx documents'
   s.description = 'It allows you to create docx document and to put formatted text, insert images and tables to it'
   s.authors     = ['JetRuby']
