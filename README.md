@@ -89,10 +89,9 @@ If you want to insert **table2** with options into another table, you should pre
 ```
 This example shows how to create the table data and it's options.
 
-You can see generated docx file example here [example.docx](examples/example.docx)
+You can see generated docx file example here [example.docx](examples/documents/example.docx)
 
-Puredocx gem works fine with Microsoft Word 2016 and Libre Office. You can see screen result(for pdf screen see [pdf_screen.png](examples/pdf_screen.png)):
-![Alt text](examples/libre_office_screen.png "Screen from LibreOffice editor")
+Puredocx gem works fine with Microsoft Word 2016 and Libre Office.
 
 License
 ----
@@ -107,7 +106,7 @@ About JetRuby
 ![jetruby](http://jetruby.com/expertise/wp-content/themes/jetruby-wordpress-template/img/sprite2x.png)
 
 
-puredocx is maintained and funded by JetRuby Agency, inc.
+puredocx is maintained and founded by JetRuby Agency, inc.
 
 We love open source software!
 See [our projects][portfolio] or
