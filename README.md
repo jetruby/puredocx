@@ -103,7 +103,7 @@ MIT
 About JetRuby
 ----------------
 
-![jetruby](http://jetruby.com/expertise/wp-content/themes/jetruby-wordpress-template/img/sprite2x.png)
+![jetruby](https://avatars2.githubusercontent.com/u/4881537?s=200&v=4)
 
 
 puredocx is maintained and founded by JetRuby Agency, inc.
